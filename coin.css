@@ -1,0 +1,109 @@
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    gap: 5px;
+}
+
+.moneta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    flex: 1.5;
+    height: 50%;
+    width: 100%;
+    gap: 50px;
+}
+
+.click {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    flex: 0.5;
+    height: 50%;
+    width: 100%;
+    gap: 50px;
+}
+
+.punteggi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30%;
+    width: 100%;
+    height: 5%;
+    padding: 5px;
+}
+
+.punteggio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+}
+
+
+.moneta img {
+    display: block;
+    height: 40%;
+    object-fit: contain;
+    transition: transform 1s ease;
+}
+
+.moneta img.animata {
+    animation: lancio 0.8s linear;
+}
+
+.punteggio input {
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    font-size: x-large;
+    border-color: black;
+    border-radius: 10px;
+}
+
+.punteggio label {
+    font-size: x-large;
+    color: black;
+}
+
+.click button{
+    display: block;
+    height: 4rem;
+    width: 8rem;
+    border-radius: 2cqmin;
+    background-color: orangered;
+    color: black;
+    font-size: x-large;
+    box-shadow: 0 10px 10px black;
+}
+
+.click button:hover{
+    background-color: rgb(255, 17, 0);
+    border-radius: 25px;
+}
+
+.click button:active{
+    transform: translateY(3px);
+    box-shadow: 0 7px 10px black;
+}
+
+@keyframes lancio{
+    0%{
+        transform: translateY(0) rotateY(20deg) rotateX(0);
+    }
+    50% {
+        transform: translateY(-200px) rotateY(40deg) rotateX(360deg);
+    }
+    100% {
+        transform: translateY(0) rotateY(0) rotateX(720deg);
+    }
+}
